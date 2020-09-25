@@ -15,7 +15,20 @@ class Anagram
     if antigram?(string2)
       return "These words have no letter matches and are antigrams."
     end
-   return "These words are not anagrams."
+    return letter_matches(string2)
+  end
+
+  def letter_matches(string2)
+    string2_letters_only = string2.gsub(/[\s\W]/,"")
+    result = []
+    @letters_only_string.each_char do |c|
+      if string2_letters_only.include?(c)
+        result.push(c)
+        string2_letters_only.sub!(c, "")
+      end
+    end
+    result_string = result.join(", ")
+    return "These words aren't anagrams, but #{result.length} letters match: #{result_string}."
   end
 
   def input_contains_non_words?
