@@ -32,9 +32,28 @@ class Anagram
     return true
   end
 
+  def input_contains_non_words?
+    @string.split(" ").each do |word|
+      if !word.downcase.match?(/[aeiou]/)
+        return true
+      end
+    end
+    return false
+  end
+
+  def comparison_contains_non_words?(string2)
+    string2.split(" ").each do |word|
+      if !word.downcase.match?(/[aeiou]/)
+        return true
+      end
+    end
+    return false
+  end
+
+
   def anagram_check(string2)
-    if !@string.downcase.match?(/[aeiou]/) || !string2.downcase.match?(/[aeiou]/)
-      return "Error: You have entered a non-word. Try again."
+    if comparison_contains_non_words?(string2) || input_contains_non_words?()
+      return "Error: You have entered at least one non-word. Try again."
     end
 
     if anagram?(string2)
