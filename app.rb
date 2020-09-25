@@ -15,6 +15,4 @@ string2 = gets.chomp
 puts ""
 puts ">>> #{base_string.anagram_check(string2)}"
 puts ""
-puts ">>> . . . Goodbye!"
-puts ""
  
