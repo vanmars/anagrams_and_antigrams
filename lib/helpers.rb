@@ -1,8 +1,14 @@
 require ('dictionary_lookup')
 
 def not_word?(string)
-  symbols_removed_string = string.gsub(/[\W]/, "")
-  return DictionaryLookup::Base.define(symbols_removed_string).count == 0
+  string_array = string.split(" ")
+  string_array.each do |word|
+    word = word.gsub(/[\W]/, "")
+    if DictionaryLookup::Base.define(word).count == 0
+      return true
+    end
+  end
+  return false
 end
 
 def palindrome?(input)
