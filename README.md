@@ -8,7 +8,9 @@ _25 September 2020_
 
 ## Description
 
-_This is a project for Epicodus to practice using test driven development and encapsulation while working with Ruby classes and methods. the original instructions for the project include:_
+_This is a project for Epicodus to practice using test driven development and encapsulation while working with Ruby classes and methods. This program allows users to input two strings. It then checks to see if the two strings are anagrams or antigrams. If neither, it returns the letters that do match. The program also informs the user whether each individual string is a palindrome or not. Finally, if a user enters a word that is not a real word, the program will return an error and ask the user to try again._ 
+
+_The original instructions for the project include:_
 
 Create an algorithm with an anagram method that follows the rules included below.
 
