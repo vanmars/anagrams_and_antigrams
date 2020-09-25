@@ -37,7 +37,11 @@ class Anagram
       return false
     end
     @letters_only_string.each_char do |c|
-      @letters_only_string.downcase.count(c.downcase) == string2_letters_only.downcase.count(c.downcase) ? next : false
+      if @letters_only_string.downcase.count(c.downcase) == string2_letters_only.downcase.count(c.downcase)  
+        next
+      else
+        return false
+      end
     end
     return true
   end
