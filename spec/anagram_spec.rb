@@ -28,4 +28,9 @@ describe ('Anagram#anagram_check') do
     expect(string.anagram_check("bye")).to(eq("These words have no letter matches and are antigrams."))
   end
 
+  it('works with spaces and punctuation') do
+    string = Anagram.new('Tom Marvolo Riddle')
+    expect(string.anagram_check("I Am Lord Voldemort")).to(eq("These words are anagrams!"))
+  end
+
 end
