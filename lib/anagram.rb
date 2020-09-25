@@ -11,7 +11,8 @@ class Anagram
   def anagram_check(string2)
     if anagram?(string2)
       return "These words are anagrams!#{palindrome_results(string2)}"
-    elsif antigram?(string2)
+    end
+    if antigram?(string2)
       return "These words have no letter matches and are antigrams.#{palindrome_results(string2)}"
     end
     return "#{letter_matches(string2)}#{palindrome_results(string2)}"
@@ -48,9 +49,7 @@ class Anagram
   def antigram? (string2)
     string2_letters_only = string2.gsub(/[\s\W]/,"")
     @letters_only_string.each_char do |c|
-      if @letters_only_string.downcase.count(c.downcase) != string2_letters_only.downcase.count(c.downcase)
-        next
-      else 
+      if string2_letters_only.include?(c)
         return false
       end
     end
