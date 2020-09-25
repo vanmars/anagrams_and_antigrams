@@ -32,5 +32,9 @@ puts ""
 puts ">>> #{base_string.anagram_check(string2)}"
 puts ""
 
+puts "********"
+puts "Goodbye!"
+puts "********"
+puts ""
 
  
