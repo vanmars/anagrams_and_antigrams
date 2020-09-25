@@ -17,4 +17,9 @@ describe ('Anagram#anagram_check') do
     string = Anagram.new('Tea')
     expect(string.anagram_check("Eat")).to(eq("These words are anagrams!"))
   end
+
+  it('does not include non-words in anagram test') do
+    string = Anagram.new('ctgc')
+    expect(string.anagram_check("gcct")).to(eq("Error: You have entered a non-word. Try again."))
+  end
 end
