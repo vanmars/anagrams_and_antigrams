@@ -1,3 +1,5 @@
+require ('dictionary_lookup')
+
 class Anagram
 
   def initialize(string_input)
