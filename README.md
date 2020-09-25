@@ -40,8 +40,10 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 | -------- | -------- | -------- | -------- |
 | 6 | Program accounts for multiple words being anagrams or antigrams. (Spaces and punctuation don't count.), but will reject entire phrase if it contains non-words. | "Tzm Mqrvzlz Rbddle" and "B Qm Lzrd Vzldemzrt." | "Error: You have entered at least one non-word. Try again." |
 | 7 | If two words are not anagrams, program returns how many letters from the argument are actual matches with the receiver. | "catt" and "batty" | "These words aren't matches, but 3 letters match: a, t, t." |
-| 8 | Program is refactored to call multiple other methods. (Call a palindrome method.) | "Do geese see god" and "Live on time, emit no evil"| "These words are not anagrams, but they are both palindromes!" |
-| 9 | Program uses a dictionary gem to check whether inputs are words. | "ruby" and "yurb" | "'yurb' is not a word." |
+| 8 | Program runs a palindrome check on non-anagrams and non-antigrams| "mom" and "mommy"| "These words aren't anagrams, but 3 letters match: m, o, m. (By the way . . . 'mom' is a palindrome!" |
+| 9 | Program runs a palindrome check on anagrams| "racecar" and "care arc"| "These words are anagrams! (By the way . . . 'racecar' is a palindrome!" |
+| 10 | Program runs a palindrome check on antigrams| "madam" and "refer"| "These words have no letter matches and are antigrams! (By the way . . . 'madam' and 'refer' are palindromes!" |
+| 11 | Program uses a dictionary gem to check whether inputs are words. | "ruby" and "yurb" | "'yurb' is not a word." |
 
 ## Setup/Installation Requirements
 
