@@ -8,12 +8,7 @@ describe ('Anagram#anagram_check') do
     expect(string.anagram_check("bury")).to(eq("These words are anagrams!"))
   end
 
-  it('Spec 1: Correctly checks whether two words are not anagrams') do
-    string = Anagram.new('ruby')
-    expect(string.anagram_check("burry")).to(eq("These words are not anagrams."))
-  end
-
-  it('spec 2: Accounts for capitalized letters') do
+  it('Spec 2: Accounts for capitalized letters') do
     string = Anagram.new('Tea')
     expect(string.anagram_check("Eat")).to(eq("These words are anagrams!"))
   end
@@ -39,8 +34,8 @@ describe ('Anagram#anagram_check') do
   end
 
   it('Spec 7: Returns how many letters are actual matches') do
-    string = Anagram.new('cat')
-    expect(string.anagram_check("batty")).to(eq("These words aren't anagrams, but 2 letters match: a, t."))
+    string = Anagram.new('catt')
+    expect(string.anagram_check("batty")).to(eq("These words aren't anagrams, but 3 letters match: a, t, t."))
   end
 
 end
