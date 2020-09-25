@@ -31,16 +31,17 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 | -------- | -------- | -------- | -------- |
 | 1 | Program checks if two words are anagrams. | "ruby" and "bury" | "These words are anagrams!" |
 | 2 | Program accounts for capitalized letters. | "Tea" and "Eat" | "These words are anagrams!" |
-| 3 | Program checks that inputs are indeed words (using the rule that all words must contain at least one vowel). | "ctgc" and "gcct" | "These are not words." |
+| 3 | Program checks that inputs are indeed words (using the rule that all words must contain at least one vowel). | "ctgc" and "gcct" | "Error: You have entered at least one non-word. Try again." |
 | 4 | Program checkes whether non-anagrams are antigrams. | "hi" and "bye" | "These words have no letter matches and are antigrams." |
 | 5 | Program accounts for multiple words being anagrams or antigrams. (Spaces and punctuation don't count.) | "Tom Marvolo Riddle" and "I Am Lord Voldemort." | "These words are anagrams." |
 
 ## Stretch Specifications
 | Spec     | Behavior | Input    | Output   |
 | -------- | -------- | -------- | -------- |
-| 6 | If two words are not anagrams, program returns how many letters from the argument are actual matches with the receiver. | "cat" and "batty" | "These words aren't matches, but 2 letters match: a, t." |
-| 7 | Program is refactored to call multiple other methods. (Call a palindrome method.) | "Do geese see god" and "Live on time, emit no evil"| "These words are not anagrams, but they are both palindromes!" |
-| 8 | Program uses a dictionary gem to check whether inputs are words. | "ruby" and "yurb" | "'yurb' is not a word." |
+| 6 | Program accounts for multiple words being anagrams or antigrams. (Spaces and punctuation don't count.), but will reject entire phrase if it contains non-words. | "Tzm Mqrvzlz Rbddle" and "B Qm Lzrd Vzldemzrt." | "Error: You have entered at least one non-word. Try again." |
+| 7 | If two words are not anagrams, program returns how many letters from the argument are actual matches with the receiver. | "cat" and "batty" | "These words aren't matches, but 2 letters match: a, t." |
+| 8 | Program is refactored to call multiple other methods. (Call a palindrome method.) | "Do geese see god" and "Live on time, emit no evil"| "These words are not anagrams, but they are both palindromes!" |
+| 9 | Program uses a dictionary gem to check whether inputs are words. | "ruby" and "yurb" | "'yurb' is not a word." |
 
 ## Setup/Installation Requirements
 
