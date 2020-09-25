@@ -28,7 +28,19 @@ class Anagram
       end
     end
     result_string = result.join(", ")
-    return "These words aren't anagrams, but #{result.length} letters match: #{result_string}."
+    if palindrome?(@letters_only_string) && palindrome?(string2_letters_only)
+      return "These words aren't anagrams, but #{result.length} letters match: #{result_string}. (By the way . . . #{@string} and #{string2} are both palindromes!)"
+    elsif palindrome?(@letters_only_string)
+      return "These words aren't anagrams, but #{result.length} letters match: #{result_string}. (By the way . . . #{@string} is a palindrome!)"
+    elsif palindrome?(string2_letters_only)
+      return "These words aren't anagrams, but #{result.length} letters match: #{result_string}. (By the way . . . #{string2} is a palindrome!)"
+    else
+      return "These words aren't anagrams, but #{result.length} letters match: #{result_string}."
+    end
+  end
+
+  def palindrome?(input)
+    return input.downcase == input.downcase.reverse
   end
 
   def input_contains_non_words?

@@ -40,7 +40,7 @@ describe ('Anagram#anagram_check') do
 
   it('Spec 8: Checks for palindromes') do
     string = Anagram.new('mom')
-    expect(string.anagram_check("mommy")).to(eq("These words aren't anagrams, but 3 letters match: m, o, m. By the way, mom is a palindrome."))
+    expect(string.anagram_check("mommy")).to(eq("These words aren't anagrams, but 3 letters match: m, o, m. (By the way . . . mom is a palindrome!)"))
   end
 
 end
