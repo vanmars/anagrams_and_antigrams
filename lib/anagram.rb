@@ -1,4 +1,5 @@
 require ('dictionary_lookup')
+require ('./lib/helpers')
 
 class Anagram
 
@@ -8,9 +9,6 @@ class Anagram
   end
 
   def anagram_check(string2)
-    if input_contains_non_words?() || comparison_contains_non_words?(string2)
-      return "Error: You have entered at least one non-word. Try again."
-    end
     if anagram?(string2)
       return "These words are anagrams!#{palindrome_results(string2)}"
     end
@@ -18,28 +16,6 @@ class Anagram
       return "These words have no letter matches and are antigrams.#{palindrome_results(string2)}"
     end
     return "#{letter_matches(string2)}#{palindrome_results(string2)}"
-  end
-
-  def input_contains_non_words?
-    @string.split(" ").each do |word|
-      if !word.downcase.match?(/[aeiou]/)
-        return true
-      end
-    end
-    return false
-  end
-
-  def comparison_contains_non_words?(string2)
-    string2.split(" ").each do |word|
-      if !word.downcase.match?(/[aeiou]/)
-        return true
-      end
-    end
-    return false
-  end
-
-  def palindrome?(input)
-    return input.downcase == input.downcase.reverse
   end
 
   def palindrome_results(string2)
