@@ -22,4 +22,10 @@ describe ('Anagram#anagram_check') do
     string = Anagram.new('ctgc')
     expect(string.anagram_check("gcct")).to(eq("Error: You have entered a non-word. Try again."))
   end
+
+  it('checks for antigrams') do
+    string = Anagram.new('hi')
+    expect(string.anagram_check("bye")).to(eq("These words have no letter matches and are antigrams."))
+  end
+
 end
