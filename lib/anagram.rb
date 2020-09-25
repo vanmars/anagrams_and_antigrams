@@ -5,6 +5,9 @@ class Anagram
 
   def initialize(string_input)
     @string = string_input
+    if @string.include?(".txt")
+      @string = File.read(@string)
+    end
     @letters_only_string = @string.gsub(/[\s\W]/, "")
   end
 
