@@ -11,10 +11,9 @@ class Anagram
     end
     if anagram?(string2)
       return anagram_palindrome_matches(string2)
-      # return "These words are anagrams!"
     end
     if antigram?(string2)
-      return "These words have no letter matches and are antigrams."
+      return antigram_palindrome_matches(string2)
     end
     return letter_matches(string2)
   end
@@ -33,17 +32,18 @@ class Anagram
     end
   end
 
-  # def antigram_palindrome_matches(string2)
-  #   string2_letters_only = string2.gsub(/[\s\W]/,"")
-  #   if palindrome?(@letters_only_string) && palindrome?(string2_letters_only)
-  #     return
-  #   elsif palindrome?(@letters_only_string)
-  #     return
-  #   elsif palindrome?(string2_letters_only)
-  #     return
-  #   else
-  #     return "These words have no letter matches and are antigrams."
-  # end
+  def antigram_palindrome_matches(string2)
+    string2_letters_only = string2.gsub(/[\s\W]/,"")
+    if palindrome?(@letters_only_string) && palindrome?(string2_letters_only)
+      return "These words have no letter matches and are antigrams. (By the way . . . '#{@string}' and '#{string2}' are both palindromes!)"
+    elsif palindrome?(@letters_only_string)
+      return "These words have no letter matches and are antigrams. (By the way . . . '#{@string}' is a palindrome!)"
+    elsif palindrome?(string2_letters_only)
+      return "These words have no letter matches and are antigrams. (By the way . . . '#{string2}' is a palindrome!)"
+    else
+      return "These words have no letter matches and are antigrams."
+    end
+  end
 
 
 
