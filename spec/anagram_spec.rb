@@ -48,4 +48,9 @@ describe ('Anagram#anagram_check') do
     expect(string.anagram_check("care arc")).to(eq("These words are anagrams! (By the way . . . 'racecar' is a palindrome!)"))
   end
 
+  it('Spec 10: Checks for palindromes for antigrams') do
+    string = Anagram.new('madam')
+    expect(string.anagram_check("refer")).to(eq("These words have no letter matches and are antigrams. (By the way . . . 'madam' and 'refer' are both palindromes!)"))
+  end
+
 end
