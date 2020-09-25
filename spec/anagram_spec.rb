@@ -20,7 +20,7 @@ describe ('Anagram#anagram_check') do
 
   it('does not include non-words in anagram test') do
     string = Anagram.new('ctgc')
-    expect(string.anagram_check("gcct")).to(eq("Error: You have entered a non-word. Try again."))
+    expect(string.anagram_check("gcct")).to(eq("Error: You have entered at least one non-word. Try again."))
   end
 
   it('checks for antigrams') do
@@ -31,6 +31,11 @@ describe ('Anagram#anagram_check') do
   it('works with spaces and punctuation') do
     string = Anagram.new('Tom Marvolo Riddle')
     expect(string.anagram_check("I Am Lord Voldemort")).to(eq("These words are anagrams!"))
+  end
+
+  it('works with spaces and punctuation, but rejects non-words in a sentence') do
+    string = Anagram.new('Tzm Mqrvzlz Rbddle')
+    expect(string.anagram_check("B Qm Lzrd Vzldemzrt")).to(eq("Error: You have entered at least one non-word. Try again."))
   end
 
 end
