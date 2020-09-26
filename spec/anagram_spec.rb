@@ -57,7 +57,7 @@ describe ('Anagram#anagram_check') do
 
   it('Spec 12: Processes .txt files') do
     string = Anagram.new('time.txt')
-    expect(string.anagram_check("geese.txt")).to(eq("These words have no letter matches and are antigrams. (By the way . . . 'madam' and 'refer' are both palindromes!)"))
+    expect(string.anagram_check("geese.txt")).to(eq("These words aren't anagrams, but 6 letters match: e, o, e, e, o, e. (By the way . . . '\"Live on time, emit no evil.\"' and '\"Do geese see God?\"' are both palindromes!)"))
   end
 
 end
