@@ -38,5 +38,3 @@ puts "********"
 puts "Goodbye!"
 puts "********"
 puts ""
-
- 
