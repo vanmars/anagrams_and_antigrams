@@ -55,7 +55,7 @@ describe ('Anagram#anagram_check') do
     expect(string.anagram_check("refer")).to(eq("These words have no letter matches and are antigrams. (By the way . . . 'madam' and 'refer' are both palindromes!)"))
   end
 
-  # conducted tests for Spec 11 by running 'ruby app.rb' and entering a mispelled word 
+  # Conducted tests for Spec 11 by running 'ruby app.rb' and entering a mispelled word 
 
   it('Spec 12: Processes .txt files') do
     string = Anagram.new('time.txt')
