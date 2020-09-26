@@ -55,4 +55,9 @@ describe ('Anagram#anagram_check') do
     expect(string.anagram_check("refer")).to(eq("These words have no letter matches and are antigrams. (By the way . . . 'madam' and 'refer' are both palindromes!)"))
   end
 
+  it('Spec 12: Processes .txt files') do
+    string = Anagram.new('time.txt')
+    expect(string.anagram_check("geese.txt")).to(eq("These words have no letter matches and are antigrams. (By the way . . . 'madam' and 'refer' are both palindromes!)"))
+  end
+
 end
