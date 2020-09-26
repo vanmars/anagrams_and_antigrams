@@ -8,9 +8,9 @@ _25 September 2020_
 
 ## Description
 
-_This is a project for Epicodus to practice using test driven development and encapsulation while working with Ruby classes and methods. This program queries users for two inputs: a word, sentence or name of a .txt file, containing words or sentences. The program then checks to see if the two strings are anagrams or antigrams (spacing, punctuation, and capitaliztion do not cause errors). If neither, the program returns the letters that do match. The program also informs the user whether each individual input is a palindrome or not. If a user enters a word that is not a real word, the program will return an error and prompt the user to enter a new input before continuing. Once the program completes it checks, it gives the user the option to enter two new strings or to quit the program altogether._ 
+_This is a project for Epicodus to practice using test driven development and encapsulation while working with Ruby classes and methods. This program queries users for two inputs: a word, sentence, or name of a .txt file, containing words or sentences. The program then checks to see if the two strings are anagrams or antigrams of one another (spacing, punctuation, and capitaliztion do not cause errors). If neither, the program returns the letters that both inputs share. The program also informs the user whether each individual input is a palindrome or not. Additionally, if a user enters a word that is not a real word, the program will return an error and prompt the user to enter a new input before continuing. Once the program completes its checks, it gives the user the option to enter two new inputs or to quit the program altogether._ 
 
-_The original instructions for the project are listed below:_
+_The original Epicodus instructions for the project are listed below:_
 
 Create an algorithm with an anagram method that follows the rules included below.
 
@@ -35,7 +35,7 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 | 2 | Program accounts for capitalized letters. | "Tea" and "Eat" | "These words are anagrams!" |
 | 3 | Program checks that inputs are indeed words (using the rule that all words must contain at least one vowel). | "ctgc" and "gcct" | "Error: You have entered at least one non-word. Try again." |
 | 4 | Program checkes whether non-anagrams are antigrams. | "hi" and "bye" | "These words have no letter matches and are antigrams." |
-| 5 | Program accounts for multiple words being anagrams or antigrams. (Spaces and punctuation don't count.) | "Tom Marvolo Riddle" and "I Am Lord Voldemort." | "These words are anagrams." |
+| 5 | Program accounts for multiple words being anagrams or antigrams. (Spaces and punctuation don't count.) | "Tom Marvolo Riddle" and "I Am Lord Voldemort." | "These words are anagrams!" |
 
 ## Stretch Specifications
 | Spec     | Behavior | Input    | Output   |
@@ -56,15 +56,15 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 - Open the cloned repo in a text editor of your choice.
 
 - **To Run Tests**: While in the root directory of this project, run 'rspec' in your command line.
-- **To Run the Console App**: While in the root directory of the project, run 'ruby app.rb' in the terminal. (For fun: try entering the two .txt files 'time.txt' and 'geese.txt' as inputs in the app. Or, better yet, add your own .txt files to this project directory and process them!)
+- **To Run the Console App**: While in the root directory of the project, run 'ruby app.rb' in the terminal. (For fun: try entering the two .txt files--'time.txt' and 'geese.txt'--as inputs in the app. Or, better yet, add your own .txt files to this project directory and process them by entering them as inputs in the console app!)
 
 ## Known Bugs
-* The 'dictionary_lookout' gem, oddly, does not return entries for common words. I encountered issues with the following words: _egg_, _monkey_, _lived_.
+* The 'dictionary_lookout' gem, oddly, does not return entries for common words. I encountered issues with the following words: _egg_, _monkey_, _lived_. There may be better dictionary gems I should consider using.
 
 ## Elements to Improve
-* I would like to allow users to enter names, but currently the dictionary_lookout gem rejects names as non-words.
+* I would like to allow users to enter names, but currently the 'dictionary_lookout' gem rejects names as non-words.
 * If a user enters a .txt file as an input, the code currently does not check the text within that file for non-words. In the future, I'd like to run that word check on the contents of the file.
-* Some tests are commented out in the 'anagram_spec.rb' file, for the 'dictionary_lookout' gem addition made checking for words in the 'anagram.rb' file redundant. Ordinarilly, I would remove these commented out pieces of code, but for the sake of my teachers at Epicodus, I have left them in.
+* Some tests are commented out in the 'anagram_spec.rb' file, for the 'dictionary_lookout' gem addition made checking for words in the 'anagram.rb' file redundant. Ordinarilly, I would remove these commented-out pieces of code, but for the sake of my teachers at Epicodus, I have left them in so that they can see my test-driven development process.
 
 ## Support and Contact Details
 
