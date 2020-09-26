@@ -12,6 +12,9 @@ class Anagram
   end
 
   def anagram_check(string2)
+    if string2.include?(".txt")
+      string2 = File.read(string2)
+    end
     if anagram?(string2)
       return "These words are anagrams!#{palindrome_results(string2)}"
     end
@@ -22,6 +25,9 @@ class Anagram
   end
 
   def palindrome_results(string2)
+    if string2.include?(".txt")
+      string2 = File.read(string2)
+    end
     string2_letters_only = string2.gsub(/[\s\W]/,"")
     if palindrome?(@letters_only_string) && palindrome?(string2_letters_only)
       return " (By the way . . . '#{@string}' and '#{string2}' are both palindromes!)"
@@ -35,6 +41,9 @@ class Anagram
   end
 
   def anagram?(string2)
+    if string2.include?(".txt")
+      string2 = File.read(string2)
+    end
     string2_letters_only = string2.gsub(/[\s\W]/,"")
     if @letters_only_string.length != string2_letters_only.length
       return false
@@ -50,6 +59,9 @@ class Anagram
   end
 
   def antigram? (string2)
+    if string2.include?(".txt")
+      string2 = File.read(string2)
+    end
     string2_letters_only = string2.gsub(/[\s\W]/,"")
     @letters_only_string.each_char do |c|
       if string2_letters_only.include?(c)
@@ -60,6 +72,9 @@ class Anagram
   end
 
   def letter_matches(string2)
+    if string2.include?(".txt")
+      string2 = File.read(string2)
+    end
     string2_letters_only = string2.gsub(/[\s\W]/,"")
     result = []
     @letters_only_string.each_char do |c|
