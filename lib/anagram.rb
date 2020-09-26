@@ -1,4 +1,3 @@
-require ('dictionary_lookup')
 require ('./lib/helpers')
 
 class Anagram
