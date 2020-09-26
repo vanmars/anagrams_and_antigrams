@@ -64,6 +64,7 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 ## Elements to Improve
 * I would like to allow users to enter names, but currently the dictionary_lookout gem rejects names as non-words.
 * If a user enters a .txt file as an input, the code currently does not check the text within that file for non-words. In the future, I'd like to run that word check on the contents of the file.
+* Some tests are commented out in the 'anagram_spec.rb' file, for the 'dictionary_lookout' gem addition made checking for words in the 'anagram.rb' file redundant. Ordinarilly, I would remove these commented out pieces of code, but for the sake of my teachers at Epicodus, I have left them in.
 
 ## Support and Contact Details
 
