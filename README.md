@@ -1,16 +1,16 @@
-# _Anagrams and Antigrams_
+# _Anagrams, Antigrams, and Palindromes . . . Oh My!!!_
 
 _25 September 2020_
 
-#### _Program checks for anagrams, antigrams, and palindromes_
+#### _A console app that checks for anagrams, antigrams, and palindromes_
 
 #### By _**Vanessa Stewart**_
 
 ## Description
 
-_This is a project for Epicodus to practice using test driven development and encapsulation while working with Ruby classes and methods. This program allows users to input two strings. It then checks to see if the two strings are anagrams or antigrams. If neither, it returns the letters that do match. The program also informs the user whether each individual string is a palindrome or not. Finally, if a user enters a word that is not a real word, the program will return an error and ask the user to try again._ 
+_This is a project for Epicodus to practice using test driven development and encapsulation while working with Ruby classes and methods. This program queries users for two inputs: a word, sentence or name of a .txt file, containing words or sentences. The program then checks to see if the two strings are anagrams or antigrams (spacing, punctuation, and capitaliztion do not cause errors). If neither, the program returns the letters that do match. The program also informs the user whether each individual input is a palindrome or not. If a user enters a word that is not a real word, the program will return an error and prompt the user to enter a new input before continuing. Once the program completes it checks, it gives the user the option to enter two new strings or to quit the program altogether._ 
 
-_The original instructions for the project include:_
+_The original instructions for the project are listed below:_
 
 Create an algorithm with an anagram method that follows the rules included below.
 
@@ -44,8 +44,9 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 | 7 | If two words are not anagrams, program returns how many letters from the argument are actual matches with the receiver. | "catt" and "batty" | "These words aren't matches, but 3 letters match: a, t, t." |
 | 8 | Program runs a palindrome check on non-anagrams and non-antigrams| "mom" and "mommy"| "These words aren't anagrams, but 3 letters match: m, o, m. (By the way . . . 'mom' is a palindrome!" |
 | 9 | Program runs a palindrome check on anagrams| "racecar" and "care arc"| "These words are anagrams! (By the way . . . 'racecar' is a palindrome!" |
-| 10 | Program runs a palindrome check on antigrams| "madam" and "refer"| "These words have no letter matches and are antigrams! (By the way . . . 'madam' and 'refer' are palindromes!" |
-| 11 | Program uses a dictionary gem to check whether inputs are words. | "ruby" and "yurb" | "'yurb' is not a word." |
+| 10 | Program runs a palindrome check on antigrams| "madam" and "refer"| "These words have no letter matches and are antigrams! (By the way . . . 'madam' and 'refer' are both palindromes!" |
+| 11 | Program uses a dictionary gem to check whether inputs are words. | "yurb" | "Error: 'yurb' contains a non-word. Please enter another word or sentence:" |
+| 12 | Program process strings within .txt files. | "time.txt" and "geese.txt" | These words aren't anagrams, but 6 letters match: e, o, e, e, o, e. (By the way . . . '"Live on time, emit no evil."' and '"Do geese see God?"' are both palindromes!) |
 
 ## Setup/Installation Requirements
 
@@ -54,21 +55,24 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 - Navigate to the cloned folder and run 'bundle' in your command line to download all dependencies.
 - Open the cloned repo in a text editor of your choice.
 
-- **To Run Tests**: While in the root directory of the project, run 'rspec' in your command line.
-- **To Run the Console App**: While in the root directory of the project, run 'ruby app.rb' in the terminal.
+- **To Run Tests**: While in the root directory of this project, run 'rspec' in your command line.
+- **To Run the Console App**: While in the root directory of the project, run 'ruby app.rb' in the terminal. (For fun: try entering the two .txt files 'time.txt' and 'geese.txt' as inputs in the app. Or, better yet, add your own .txt files to this project directory and process them!)
 
 ## Known Bugs
+* The 'dictionary_lookout' gem, oddly, does not return entries for common words. I encountered issues with the following words: _egg_, _monkey_, _lived_.
 
-_There are no known bugs at this time._
+## Elements to Improve
+* I would like to allow users to enter names, but currently the dictionary_lookout gem rejects names as non-words.
+* If a user enters a .txt file as an input, the code currently does not check the text within that file for non-words. In the future, I'd like to run that word check on the contents of the file.
 
 ## Support and Contact Details
 
-_Connect with me at vamariestewart@gmail.com with ideas to improve this project._
+_Connect with me at vamariestewart@gmail.com with ideas to improve this project!_
 
 ## Technologies Used
 
 * Ruby
-* Ruby Gems: RSpec, Pry
+* Ruby Gems: rspec, pry, dictionary_lookout
 
 ### License
 
